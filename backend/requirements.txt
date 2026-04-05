@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+google-genai
+supabase
+python-dotenv
+pydantic
+langgraph
+langgraph-checkpoint-sqlite
+aiosqlite

@@ -1,0 +1,13 @@
+from pydantic import BaseModel
+from typing import Literal, Optional
+from datetime import datetime
+
+class TimeWindow(BaseModel):
+    start: datetime
+    end: datetime
+
+class ReportRequest(BaseModel):
+    report_type: Literal["daily_brief", "weekly_summary", "approval_queue", "risk_digest"]
+    user_role: Literal["founder", "admin", "manager", "viewer"]
+    time_window: TimeWindow
+    custom_prompt: Optional[str] = None
